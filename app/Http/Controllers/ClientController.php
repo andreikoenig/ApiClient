@@ -14,4 +14,15 @@ class ClientController extends Controller
 
         return $response->getBody()->getContents();
     }
+
+    protected function makeGetRequest($url) {
+        $response = $this->makeRequest('GET',$url);
+        $parsed_response = json_decode($response);
+
+        return $parsed_response;
+    }
+
+    protected function fetchAllPosts() {
+        return $this->makeGetRequest('http://jsonplaceholder.typicode.com/posts');
+    }
 }
