@@ -24,5 +24,4 @@ class PostController extends ClientController
 
         return view('posts.single-post', ['post' => $post]);
     }
-
 }

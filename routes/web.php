@@ -17,8 +17,11 @@ Route::get('/albums', 'AlbumController@getAllAlbums');
 Route::get('/post', 'PostController@getPostId');
 Route::post('/post', 'PostController@getAPost');
 
-Route::get('/users', 'UserController@getAllUsers');
-Route::get('/albums', 'AlbumController@getAllAlbums');
+Route::get('/user', 'UserController@getUserId');
+Route::post('/user', 'UserController@getAUser');
+
+Route::get('/album', 'AlbumController@getAlbumId');
+Route::post('/album', 'AlbumController@getAnAlbum');
 
 Route::get('/', function () {
     return view('main');

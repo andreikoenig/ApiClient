@@ -36,8 +36,16 @@ class ClientController extends Controller
         return $this->makeGetRequest('http://jsonplaceholder.typicode.com/users');
     }
 
+     protected function fetchAUser($userId) {
+        return $this->makeGetRequest("http://jsonplaceholder.typicode.com/users/{$userId}");
+    }
+
     // Functions for albums resources
     protected function fetchAllAlbums() {
         return $this->makeGetRequest('http://jsonplaceholder.typicode.com/albums');
+    }
+
+    protected function fetchAnAlbum($album) {
+        return $this->makeGetRequest("http://jsonplaceholder.typicode.com/albums/{$album}");
     }
 }
