@@ -12,6 +12,7 @@
 */
 Route::get('/posts', 'PostController@getAllPosts');
 Route::get('/users', 'UserController@getAllUsers');
+Route::get('/albums', 'AlbumController@getAllAlbums');
 
 Route::get('/', function () {
     return view('main');
