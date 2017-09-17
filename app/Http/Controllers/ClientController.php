@@ -22,7 +22,13 @@ class ClientController extends Controller
         return $parsed_response;
     }
 
+    // Functions for posts resources
     protected function fetchAllPosts() {
         return $this->makeGetRequest('http://jsonplaceholder.typicode.com/posts');
+    }
+
+    // Functions for users resources
+    protected function fetchAllUsers() {
+        return $this->makeGetRequest('http://jsonplaceholder.typicode.com/users');
     }
 }
