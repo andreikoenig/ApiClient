@@ -13,7 +13,7 @@
     <body>
 
         <div class="page-header">
-            <h1> API CLIENT</h1>
+            <a href="{{url('/')}}"><h1>API CLIENT</h1></a>
         </div>
 
         <div class="container-fluid">

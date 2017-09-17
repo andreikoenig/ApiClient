@@ -27,6 +27,10 @@ class ClientController extends Controller
         return $this->makeGetRequest('http://jsonplaceholder.typicode.com/posts');
     }
 
+    protected function fetchAPost($postId) {
+        return $this->makeGetRequest("http://jsonplaceholder.typicode.com/posts/{$postId}");
+    }
+
     // Functions for users resources
     protected function fetchAllUsers() {
         return $this->makeGetRequest('http://jsonplaceholder.typicode.com/users');
